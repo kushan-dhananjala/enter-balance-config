@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: 8089
 
 spring:
   application:
@@ -11,7 +11,7 @@ spring:
           issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5434/postgres
+    url: jdbc:postgresql://localhost:5433/postgres
     username: postgres
     password: postgres
   jpa:
