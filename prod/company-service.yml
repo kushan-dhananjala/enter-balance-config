@@ -16,3 +16,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+test:
+  str:
+    text: test-str-prod

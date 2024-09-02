@@ -1,6 +1,6 @@
 server:
   port: 8084
-  
+
 spring:
   application:
     name: company-service
@@ -17,3 +17,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+test:
+  str:
+    text: test-str-dev
