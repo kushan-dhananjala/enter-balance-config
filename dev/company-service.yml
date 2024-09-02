@@ -20,7 +20,7 @@ spring:
 
 test:
   str:
-    text: test-str-dev-updated
+    text: test-str-dev-updated-latest
 
 management:
   endpoints:
