@@ -2,6 +2,12 @@ spring:
   application:
     name: api-gateway
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
+
   cloud:
     gateway:
       mvc:
@@ -21,12 +27,6 @@ spring:
             uri: http://company-service:8084
             predicates:
               - Path=/api/company/**
-
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
 
 management:
   endpoints:
