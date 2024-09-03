@@ -1,13 +1,16 @@
 server:
-  port: 8087
+  port: 8084
+
 spring:
   application:
     name: company-service
+
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/postgres
@@ -19,10 +22,10 @@ spring:
 
 test:
   str:
-    text: test-str-prod
+    text: test-str-dev-updated-latest
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: *

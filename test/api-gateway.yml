@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          # Method-config-service routes
+          - id: method-config-service
+            uri: http://method-config-service:8081
+            predicates:
+              - Path=/api/methodConfig/**
+          # User-service routes
+          - id: user-service
+            uri: http://user-service:8083
+            predicates:
+              - Path=/api/user/**
+          # Company-service routes
+          - id: company-service
+            uri: http://company-service:8084
+            predicates:
+              - Path=/api/company/**
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
+
+logging:
+  level:
+    root: DEBUG

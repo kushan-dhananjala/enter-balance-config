@@ -4,11 +4,13 @@ server:
 spring:
   application:
     name: company-service
+
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/postgres
@@ -26,4 +28,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: *
