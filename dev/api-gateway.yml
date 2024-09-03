@@ -28,6 +28,12 @@ spring:
         jwt:
           issuer-uri: http://keycloak:8181/realms/enter-balance-test-realm
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+
 logging:
   level:
     root: DEBUG
