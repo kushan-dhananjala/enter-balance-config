@@ -25,3 +25,9 @@ management:
     web:
       exposure:
         include: "*"
+
+manag:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
